@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy Stocks
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Current Price</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for row in rows %}
+                    <td>{{ row.symbol }}</td>
+                    <td>{{ row.amount }}</td>
+                    <td>{{ row.currentPrice }}</td>
+                    <td>{{ row.value }}</td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+    <h4>Cash: {{ cash }}</h4>
+    <h4>Grand total: {{ total }}</h4>
+{% endblock %}

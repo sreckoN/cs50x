@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy Stocks
+{% endblock %}
+
+{% block main %}
+    <h2>Purchases</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for purchase in purchases %}
+                    <td>{{ purchase.symbol }}</td>
+                    <td>{{ purchase.price }}</td>
+                    <td>{{ purchase.amount }}</td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+    <h2>Sells</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Price</th>
+                <th>Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for sell in sells %}
+                    <td>{{ sell.symbol }}</td>
+                    <td>{{ sell.price }}</td>
+                    <td>{{ sell.amount }}</td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

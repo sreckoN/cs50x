@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ name }}</td>
+                    <td>{{ symbol }}</td>
+                    <td>{{ price }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

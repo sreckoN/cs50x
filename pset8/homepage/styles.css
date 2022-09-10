@@ -1,0 +1,11 @@
+body {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#push:hover {
+    background-color: green;
+    border: 3px solid green;
+    border-radius: 1px;
+}
